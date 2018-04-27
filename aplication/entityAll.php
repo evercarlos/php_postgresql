@@ -2,7 +2,7 @@
 try {
     $link = require_once 'conecction.php';
 
-    $sql = "SELECT * FROM entity";
+    $sql = "SELECT * FROM entity ORDER BY id ASC ";
     $result = pg_query($link, $sql) or die('Error al seleccionar la base de datos');
     $dat = [];
     if (pg_num_rows($result) > 0) {
